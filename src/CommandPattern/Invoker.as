@@ -27,12 +27,12 @@ package CommandPattern
 			else
 				iOffCommand = c;
 		}
-		
+		/**A行為**/
 		public function executeOnCommand():void
 		{
 			iOnCommand.execute();
 		}
-		
+		/**B行為**/
 		public function executeOffCommand():void
 		{
 			iOffCommand.execute();

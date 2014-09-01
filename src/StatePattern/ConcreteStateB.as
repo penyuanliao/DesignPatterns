@@ -9,7 +9,7 @@ package StatePattern
 		public function handle(context:Context):void
 		{
 			trace("狀態B");
-			context.setState(new ConcreteStateA());
+			context.setState(context.getStateA);
 		}
 	}
 }

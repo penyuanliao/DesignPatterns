@@ -2,6 +2,8 @@ package
 {
 	import flash.display.Sprite;
 	
+	import CommandPattern.SampleCommand;
+	
 	import DecoratorPattern.FriedChicken;
 	import DecoratorPattern.Hamburger;
 	import DecoratorPattern.Meal;
@@ -10,7 +12,7 @@ package
 	import DecoratorPattern.Sample.Sword;
 	import DecoratorPattern.Sample.Weapon;
 	
-	import CommandPattern.SampleCommand;
+	import StatePattern.StateClient;
 	
 	public class OOP extends Sprite
 	{
@@ -21,6 +23,8 @@ package
 			setupDecoratorPattern2();
 			
 			setupCommandPattern();
+			
+			setupStatePattern();
 		}
 		/**  **/
 		private function setupDecoratorPattern():void
@@ -45,7 +49,10 @@ package
 		{
 			SampleCommand.testCase();
 		}
-			
+		private function setupStatePattern():void
+		{
+			var status:StateClient = new StateClient();
+		}
 		
 		
 	}

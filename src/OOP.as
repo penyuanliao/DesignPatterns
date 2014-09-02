@@ -4,6 +4,8 @@ package
 	
 	import CommandPattern.SampleCommand;
 	
+	import CompositePattern.PlayerClient;
+	
 	import DecoratorPattern.FriedChicken;
 	import DecoratorPattern.Hamburger;
 	import DecoratorPattern.Meal;
@@ -25,6 +27,8 @@ package
 			setupCommandPattern();
 			
 			setupStatePattern();
+			
+			setupCompositePattern();
 		}
 		/**  **/
 		private function setupDecoratorPattern():void
@@ -53,7 +57,10 @@ package
 		{
 			var status:StateClient = new StateClient();
 		}
-		
+		private function setupCompositePattern():void
+		{
+			var compositePattern:PlayerClient = new PlayerClient();
+		}
 		
 	}
 }

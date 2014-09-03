@@ -2,6 +2,7 @@ package CommandPattern
 {
 	/**
 	 * 命令 執行者(接收者)
+	 * doSomething全部寫在這裡
 	 **/
 	public class Receiver
 	{

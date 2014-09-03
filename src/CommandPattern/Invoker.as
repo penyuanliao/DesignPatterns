@@ -3,6 +3,7 @@ package CommandPattern
 	import CommandPattern.Command.NotificationCommand;
 	import CommandPattern.Command.ISwitchCommand;
 
+
 	/** 。 命令發送者類
 	 *  。invoker角色(調用者)
 	 *  。通常這個固定就不會變動
@@ -22,6 +23,8 @@ package CommandPattern
 		
 		public function setCommand(c:ISwitchCommand):void
 		{
+			
+			
 			if (c is NotificationCommand) 
 				iOnCommand = c;
 			else

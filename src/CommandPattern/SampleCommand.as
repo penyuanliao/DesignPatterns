@@ -1,8 +1,9 @@
 package CommandPattern
 {
+	import flash.utils.getQualifiedClassName;
+	import flash.utils.getDefinitionByName;
 	import CommandPattern.Command.NotificationCommand;
 	import CommandPattern.Command.WifiCommand;
-
 	/**
 	 * Command Pattern 屬於結論制不問結果
 	 * 
@@ -29,11 +30,21 @@ package CommandPattern
 			// 5.廚房製作(execute), action(executeOnCommand)
 			invoker.executeOnCommand(); // execute command
 			invoker.executeOffCommand(); // execute command
+			
+			class_test(Invoker);
 		}
 		
 		public static function testCase():void
 		{
 			var command:SampleCommand = new SampleCommand();
+			
+			
+		}
+		public function class_test(c:Class):void
+		{
+			trace("testCase:",getDefinitionByName(getQualifiedClassName(OOP)));
+			trace("testCase:",getDefinitionByName(getQualifiedClassName(NotificationCommand)));
+			trace(NotificationCommand);
 		}
 		
 	}

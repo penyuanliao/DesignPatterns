@@ -16,6 +16,8 @@ package
 	
 	import StatePattern.StateClient;
 	
+	import StrategyPattern.StrategyExample;
+	
 	public class OOP extends Sprite
 	{
 		public function OOP()
@@ -29,6 +31,8 @@ package
 			setupStatePattern();
 			
 			setupCompositePattern();
+			
+			setupStrategy();
 		}
 		/**  **/
 		private function setupDecoratorPattern():void
@@ -60,6 +64,11 @@ package
 		private function setupCompositePattern():void
 		{
 			var compositePattern:PlayerClient = new PlayerClient();
+		}
+		private function setupStrategy():void
+		{
+			trace(":::::::::::::: SetupStrategy ::::::::::::::");
+			var str:StrategyExample = new StrategyExample();
 		}
 		
 	}

@@ -29,7 +29,7 @@ package CommandPattern
 			
 			// 5.廚房製作(execute), action(executeOnCommand)
 			invoker.executeOnCommand(); // execute command
-			invoker.executeOffCommand(); // execute command
+//			invoker.executeOffCommand(); // execute command
 			
 			class_test(Invoker);
 		}

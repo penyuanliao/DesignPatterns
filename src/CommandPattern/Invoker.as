@@ -23,8 +23,6 @@ package CommandPattern
 		
 		public function setCommand(c:ISwitchCommand):void
 		{
-			
-			
 			if (c is NotificationCommand) 
 				iOnCommand = c;
 			else

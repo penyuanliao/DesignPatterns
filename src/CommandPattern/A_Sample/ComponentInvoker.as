@@ -6,7 +6,7 @@ package CommandPattern.A_Sample
 
 	public class ComponentInvoker
 	{
-		private var componets:Array = [];
+		private var components:Array = [];
 		private var HUDReceiver:IHUDReceiver;
 		/** 。 命令發送者類
 		 *  。invoker角色(調用者)
@@ -25,16 +25,16 @@ package CommandPattern.A_Sample
 			
 			var name:String = getComponentByName(component);
 			
-			componets[name] = component;
+			components[name] = component;
 		}
 		/**
 		 * 執行所有新增組件
 		 * **/
 		public function executeALLCompnents():void
 		{
-			for each (var componet:IUIComponent in componets)
+			for each (var component:IUIComponent in components)
 			{
-				componet.execute(HUD);
+				component.execute(HUDReceiver);
 			}
 		}
 		/**
@@ -43,8 +43,8 @@ package CommandPattern.A_Sample
 		public function executeCompnent(comp:IUIComponent):void
 		{
 			var name:String = getComponentByName(comp);
-			if (componets[name])
-				componets[name].execute(HUD);
+			if (components[name])
+				components[name].execute(HUDReceiver);
 		}
 		/**
 		 * 移除指定元件
@@ -53,17 +53,17 @@ package CommandPattern.A_Sample
 		public function removeCompnent(comp:IUIComponent):void
 		{
 			var name:String = getComponentByName(comp);
-			if (componets[name])
-				componets[name].remove();
+			if (components[name])
+				components[name].remove();
 		}
 		/**
 		 * 移除所以元件
 		 * **/
 		public function removeAllCompnents():void
 		{
-			for each (var componet:IUIComponent in componets)
+			for each (var component:IUIComponent in components)
 			{
-				componet.remove();
+				component.remove();
 			}
 		}
 		
